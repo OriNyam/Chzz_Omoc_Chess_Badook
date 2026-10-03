@@ -64,7 +64,7 @@ function App() {
     const params = new URLSearchParams(location.search);
     const authError = params.get("authError");
     if (authError) {
-      setError(authError === "not_enough_followers" ? "팔로워 기준을 충족한 치지직 채널만 방을 만들 수 있습니다." : "치지직 로그인에 실패했습니다.");
+      setError(authError === "not_enough_followers" ? "스트리머만 방을 만들 수 있습니다." : "치지직 로그인에 실패했습니다.");
       history.replaceState(null, "", location.pathname);
     }
   }, []);
